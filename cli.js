@@ -4,6 +4,8 @@ const yargs = require('yargs');
 const ora = require('ora');
 const request = require('request');
 const moment = require('moment');
+const path = require('path');
+const fs = require('fs');
 const { error, baseUrl } = require('./constants');
 const { apiKey } = require('./secrets');
 
@@ -68,6 +70,28 @@ const argv = yargs
         displayCalendar(days, body);
       }
     });
+  })
+  .command('configure', 'Set API for cricAPI', (yargAPI) => {
+    const apikey = yargAPI
+      .usage('Usage: $0 configure [options]')
+      .alias('api', 'apikey')
+      .describe('api', 'API key as provided by cricApi')
+      .string('api')
+      .example('$0 configure -api xxxxxxxxxxxxxx').argv;
+
+    const newApi = apikey.api || '';
+
+    if (newApi === '') {
+      showMessage(error.MSG, "You Haven't changed the API");
+      return;
+    }
+    const tempObj = { apiKey: newApi };
+    fs.writeFileSync(
+      path.resolve(__dirname, 'secrets.json'),
+      JSON.stringify(tempObj, null, 2),
+      'utf8'
+    );
+    showMessage(error.MSG, `API Key successfully updated to ${newApi}`);
   })
   .help('h')
   .alias('h', 'help').argv;

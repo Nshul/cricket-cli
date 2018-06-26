@@ -16,6 +16,7 @@
         "no-underscore-dangle": "off",
         "no-param-reassign": "off",
         "guard-for-in": "off",
-        "no-lonely-if": "off"
+        "no-lonely-if": "off",
+        "prefer-destructuring": "off"
       }
 }

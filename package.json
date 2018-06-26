@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin": {
+    "cricket": "./cli.js"
+  },
   "author": "nshul",
   "license": "ISC",
   "devDependencies": {
@@ -17,5 +20,12 @@
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.10.0"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "moment": "^2.22.2",
+    "ora": "^2.1.0",
+    "request": "^2.87.0",
+    "yargs": "^11.0.0"
   }
 }

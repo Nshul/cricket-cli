@@ -1,0 +1,8 @@
+{
+  "error": {
+    "DAYS_INP_ERR": "input_days_for_calendar",
+    "REQ_ERR": "error_while_requesting_from_cricapi",
+    "MSG": "display_message"
+  },
+  "baseUrl": "http://cricapi.com/api/"
+}

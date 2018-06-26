@@ -72,6 +72,9 @@ const argv = yargs
     });
   })
   .command('configure', 'Set API for cricAPI', (yargAPI) => {
+    /**
+     * Get all the options set for 'configure' command
+     */
     const apikey = yargAPI
       .usage('Usage: $0 configure [options]')
       .alias('api', 'apikey')

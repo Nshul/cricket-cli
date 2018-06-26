@@ -1,0 +1,21 @@
+{
+    "extends": "airbnb-base",
+    "parser": "babel-eslint",
+    "plugins": [
+        "react",
+        "jsx-a11y",
+        "import"
+    ],
+    "rules": {
+        "no-unused-vars": "off",
+        "no-console": "off",
+        "strict": "off",
+        "comma-dangle": "off",
+        "no-restricted-syntax": "off",
+        "prefer-const": "off",
+        "no-underscore-dangle": "off",
+        "no-param-reassign": "off",
+        "guard-for-in": "off",
+        "no-lonely-if": "off"
+      }
+}

@@ -10,7 +10,7 @@ npm link
 
 Using link `cricket` would linked with this project and you can directly access it through cli
 
-In case you would like to return back to normal
+In case you would like to return back to normal, use
 ```
 npm unlink
 ```
